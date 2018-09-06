@@ -1,0 +1,165 @@
+body {
+  background-color: #e5e4de;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: darkblue;
+}
+
+h2 {
+  color: darkblue;
+}
+
+#uri {
+  width: 50%;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  border-radius: 5px;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+#uri:focus {
+  background-color: #abbddb;
+  border: 3px solid blue;
+  border-radius: 5px;
+  outline: none;
+}
+
+#uri:hover {
+  border: 3px solid blue;
+}
+
+button {
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #4286f4;
+}
+
+label.header {
+  color: darkblue;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.loading {
+  border: 10px solid lightgray;
+  border-top: 10px solid blue;
+  margin-top: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+#load {
+  margin: 10px;
+  display: none;
+}
+
+#msg {
+  display: none;
+  position: relative;
+  left: 90px;
+  bottom: 50px;
+  color: darkgray;
+}
+
+#label {
+  margin-bottom: 7px;
+  display: none;
+}
+
+#safe_search {
+  margin-bottom: 7px;
+  display: none;
+}
+
+#labels {
+  border-width: 4px;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 5px;
+  padding: 5px 0;
+  background-color: white;
+  font-weight: bold;
+  max-width: 75%;
+  max-height: 500px;
+  overflow: auto;
+  margin-bottom: 30px;
+  display: none;
+}
+
+ul li {
+  padding: 5px;
+}
+
+#video {
+  margin: 15px 0px;
+  display: none;
+  border-radius: 5px;
+}
+
+video::cue {
+  background-color: #abbddb;
+  color: black;
+  font-weight: bold;
+}
+
+.tooltip {
+    color: darkblue;
+    font-size: 100%;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 30%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

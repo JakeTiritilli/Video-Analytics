@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Google Video Analytics Runner</title>
+  <meta charset="utf-8"/>
+  <meta name="author" content="Jacob Tiritilli"/>
+  <meta name="description" content="Google Video Analytics Tester"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui"/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+  <h1>Google Cloud Video Intelligence Test</h1>
+  <video width="50%" height="50%" id="video" controls>Your browser does not suppor HTML5 video</video>
+  <form>
+    <div class="tooltip">URI (Uniform Resource Identifier):
+      <span class="tooltiptext">Must be a Google Cloud Storage (GCS) URL</span>
+    </div><br/>
+    <input type="text" value="gs://" id="uri"><br/>
+    <label for="detection" class="header">Detection Type:</label><br/>
+    <input type="checkbox" name="analysis" value="LABEL_DETECTION" class="check" id="c1" checked/>
+    <label for="c1">Label Detection</label><br/>
+    <input type="checkbox" name="analysis" value="SHOT_CHANGE_DETECTION" class="check" id="c2"/>
+    <label for="c2">Shot Change Detection</label><br/>
+    <input type="checkbox" name="analysis" value="SAFE_SEARCH_DETECTION" class="check" id="c3"/>
+    <label for="c3">Safe Search Detection</label><br/><br/>
+  </form>
+  <button onclick="onGoPressed()">Go</button>
+  <div id="response"></div>
+  <div id="load" class="loading"></div>
+  <strong id="msg">Processing Video Content ...</strong>
+  <h2 id="label">Video Labels</h2>
+  <div id="labels">
+    <ul id=results></ul>
+  </div>
+  <h2 id="safe_search">Adult Content: <span id="result"></span></h2>
+  <script src="script.js"></script>
+</body>
+</html>
